@@ -29,5 +29,68 @@ Welcome to The Hunt app.This is a gaming app similiar to Treasure Hunt.
 </tr>
 </table>
 
+## Prerequisites
+
+- Node.js (comes with npm)
+- Git
+- TortoiseGit
+- VS Code
+
+## Prerequisites for Publishing
+
+- [Heroku CLI - to publish](https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up)
+- [Heroku login](https://id.heroku.com/login)
+- [PostgreSQL local install](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
+## How to Contribute
+
+### Step 1 - Get fresh code.
+
+1. Pull fresh code. (Fork & clone if this is the first time.)
+1. Run npm install
+1. Run npm run start
+1. Verify everything runs.
+
+### Step 2 - Make your contributions.
+
+As you test your code, format it with Prettier and
+lint (clean it up) with ESLint.
+See scripts in package.json.
+
+1. Immediately, make your local edits.
+1. Verify the app still runs & standarize your code (see commands below)
+
+```PowerShell
+npm install
+npm run start
+
+npm run prettier
+npm run lint
+npm run lint-fix
+```
+## Start Options
+
+Start the app by running npm run start.
+Until error handling is complete, a clean shutdown is better.
+
+```PowerShell
+npm run start
+```
+
+View the application locally at <http://localhost:3025/>
+
+## Sequelize commands
+
+```PowerShell
+npx sequelize-cli db:migrate
+```
+
+## PostgreSQL commands (for Production Database)
+
+```PowerShell
+Start-Process 'C:\Program Files\PostgreSQL\13\scripts\runpsql.bat'
+psql "${DATABASE_URL}"
+
+```
+
 
 
