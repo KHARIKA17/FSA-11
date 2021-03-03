@@ -52,7 +52,7 @@ Welcome to The Hunt app.This is a gaming app similiar to Treasure Hunt.
 ### Step 1 - Get fresh code.
 
 1. Pull fresh code. (Fork & clone if this is the first time.)
-1. Run npm install
+1. Run npm install.
 1. Run npm run start
 1. Verify everything runs.
 
