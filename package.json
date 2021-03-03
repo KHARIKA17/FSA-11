@@ -1,0 +1,19 @@
+{
+  "name": "group-11-full-stack-app",
+  "description": "Welcome to The Hunt app.This is a gaming app similiar to Treasure Hunt.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KHARIKA17/Group-11-Full-stack-app.git"
+  },
+  "author": "Harika",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KHARIKA17/Group-11-Full-stack-app/issues"
+  },
+  "homepage": "https://github.com/KHARIKA17/Group-11-Full-stack-app#readme"
+}
