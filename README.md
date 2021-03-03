@@ -15,9 +15,11 @@ Welcome to The Hunt app.This is a gaming app similiar to Treasure Hunt.
 ## Stack
 - Platform: Node (v15.0.1)
 - Web Framework: Express
+- View engine: EJS
 - Web App Host: Heroku
 - Data host: PostgreSQL
 - Coding standards: Prettier/ESlint
+
 
 ## CI/CD
 -Auto-deploying from our main repo.
