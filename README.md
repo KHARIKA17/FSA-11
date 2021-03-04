@@ -1,23 +1,26 @@
 # FSA-11
-Welcome to The Hunt app.This is a gaming app similiar to Treasure Hunt.
+Location based Game Application.
+
+## Overview
+A location based gaming app that helps the user to find the treasure location. First it checks the device coordinates with the target location and tells the user whether he/she is inside or outside the target location. when user clicks/touches on the first color then it provides a valid treasure location and a confirmation message will appear that a particular location is selected.Even after confirmation user is provided with option to select another location, if so the user can start the game from beginning.when the user clicks or touches the second color, if the user is inside the treasure location, user will hear information that a treasure is earned, if the user is outside the target location, user will hear information about help like in direction to walk, how far away or any other clue. 
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/dabde95955984dd08493709c421c7da6)](https://app.codacy.com/gh/denisecase/web-app-2020-fall?utm_source=github.com&utm_medium=referral&utm_content=denisecase/web-app-2020-fall&utm_campaign=Badge_Grade)
 ![GitHub repo size](https://img.shields.io/github/repo-size/denisecase/web-app-2020-fall?style=flat)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 ## User stories
-- As a player, I want to touch/click the first color to request a valid (treasure) location.
-- As a player, I want to hear confirmation that a location has been selected (so I can I can begin searching). 
-- As a player, I want to touch/click the second color:  If I am outside the treasure location, I want to hear information to help me find the treasure location (clue? how far away? what direction to walk?)
-- As a player, I want to touch/click the second color: If I am inside the treasure location, I want to hear and see confirmation that I have earned this treasure.
-- As a player, after confirmation that I have earned a location: I want the game to ask me if I would like to select another location. If I select yes, we reset and begin again. 
+- [ ] As a player, I want to touch/click the first color to request a valid (treasure) location.
+- [ ] As a player, I want to hear confirmation that a location has been selected (so I can I can begin searching). 
+- [ ] As a player, I want to touch/click the second color:  If I am outside the treasure location, I want to hear information to help me find the treasure location (clue? how far away? what direction to walk?)
+- [ ]As a player, I want to touch/click the second color: If I am inside the treasure location, I want to hear and see confirmation that I have earned this treasure.
+- [ ]As a player, after confirmation that I have earned a location: I want the game to ask me if I would like to select another location. If I select yes, we reset and begin again. 
 
 ## Stack
 - Platform: Node (v15.0.1)
 - Web Framework: Express
 - View engine: EJS
 - Web App Host: Heroku
-- Data host: PostgreSQL
+- ORM: PostgreSQL
 - Coding standards: Prettier/ESlint
 
 
@@ -81,21 +84,7 @@ Until error handling is complete, a clean shutdown is better.
 npm run start
 ```
 
-View the application locally at <http://localhost:3025/>
 
-## Sequelize commands
-
-```PowerShell
-npx sequelize-cli db:migrate
-```
-
-## PostgreSQL commands (for Production Database)
-
-```PowerShell
-Start-Process 'C:\Program Files\PostgreSQL\13\scripts\runpsql.bat'
-psql "${DATABASE_URL}"
-
-```
 
 
 
