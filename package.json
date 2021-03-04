@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/KHARIKA17/Group-11-Full-stack-app/issues"
   },
-  "homepage": "https://github.com/KHARIKA17/Group-11-Full-stack-app#readme"
+  "homepage": "https://github.com/KHARIKA17/Group-11-Full-stack-app#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "prettier": "^2.2.1"
+  }
 }
