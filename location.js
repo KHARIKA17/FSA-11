@@ -1,6 +1,6 @@
 export default [
     {
-        Name: 'Villago',
+        name: 'Villago',
         type:'triangle',
         coordinates: 
         [
