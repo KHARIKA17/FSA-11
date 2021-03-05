@@ -1,5 +1,5 @@
 # FSA-11
-Location based Game Application.
+Welcome to Location based Game Application.
 
 ## Overview
 A location based gaming app that helps the user to find the treasure location. First it checks the device coordinates with the target location and tells the user whether he/she is inside or outside the target location. when user clicks/touches on the first color then it provides a valid treasure location and a confirmation message will appear that a particular location is selected.Even after confirmation user is provided with option to select another location, if so the user can start the game from beginning.when the user clicks or touches the second color, if the user is inside the treasure location, user will hear information that a treasure is earned, if the user is outside the target location, user will hear information about help like in direction to walk, how far away or any other clue. 
