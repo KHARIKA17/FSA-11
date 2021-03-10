@@ -1,6 +1,6 @@
 export default [
     {
-        name: '1213 Apartments',
+        name: 'Villago',
         type: 'quad',
         coordinates: [
             {
