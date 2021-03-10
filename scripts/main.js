@@ -18,7 +18,7 @@ colorElement2.addEventListener('touch', onClickSquareBox2);
 
 async function onClickSquareBox1() {
     location = locationsArray[0];
-    let confirmation = "Treasure ready: " + location.name;
+    let confirmation = "Your target location is " + location.name;
     document.getElementById("status1").innerHTML = confirmation;
     let utterance = new SpeechSynthesisUtterance(confirmation);
     speechSynthesis.speak(utterance);
