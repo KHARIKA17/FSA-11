@@ -1,4 +1,4 @@
-import locationsArray from '../location.js';
+import locationsArray from '../init-locations.js';
 import {isInsideQuad} from "./location-quad.js";
 
 let colorElement1 = document.getElementById("status1");
