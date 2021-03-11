@@ -21,6 +21,12 @@ module.exports = (db, DataTypes) => {
       primaryKey: true,
       allowNull: false
     },
+    locationName:{
+      type: DataTypes.STRING(30),
+      unique: true,
+      required: true,
+      allowNull: false
+    },
     locationLatitude: {
       type: DataTypes.DECIMAL(10, 8),
       allowNull: false
