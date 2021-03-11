@@ -23,29 +23,8 @@ module.exports = (db, DataTypes) => {
         type: DataTypes.STRING(50),
       },
     },
-<<<<<<< HEAD
     {
       // Other model options go here
-=======
-    locationName:{
-      type: DataTypes.STRING(30),
-      unique: true,
-      required: true,
-      allowNull: false
-    },
-    locationLatitude: {
-      type: DataTypes.DECIMAL(10, 8),
-      allowNull: false
-    },
-    locationLongitude: {
-      type: DataTypes.DECIMAL(11, 8),
-      allowNull: false
-    },
-
-    locationValue: {
-      type: DataTypes.INTEGER,
-      allowNull: false
->>>>>>> 77ac4a2f70941a39d0359c593278e02e524cd0f8
     }
   );
 };
