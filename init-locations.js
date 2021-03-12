@@ -26,6 +26,11 @@ export default [
         Name:'B.D Owens Library',
         Latitude:40.35385, 
         Longitude:-94.88591,
+    },
+    {
+        Name:'Colden Pond',
+        Latitude:40.35006, 
+        Longitude:-94.88307,
     }
 
 ];
