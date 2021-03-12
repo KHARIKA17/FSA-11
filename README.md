@@ -7,6 +7,9 @@ A location based gaming app that helps the user to find the treasure location. F
 ## Github published link
 - https://kharika17.github.io/Group-11-Full-stack-app/
 
+## Heroku published link:
+- https://group-11-full-stack-app.herokuapp.com/
+
 ## Link shows 2-color for home page ("/")
 
 
