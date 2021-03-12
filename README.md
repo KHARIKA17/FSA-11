@@ -22,7 +22,7 @@ A location based gaming app that helps the user to find the treasure location. F
 - 1.default id
 - 2.name
 - what location shape are you using? <B>Quad</B>
-- what is the source for your location logic? 
+- what is the source for your location logic? [Talk-2-treasure-8](https://github.com/sumana-reddy/talk-2-treasure-8)
 - sample location data: https://github.com/KHARIKA17/Group-11-Full-stack-app/blob/main/init-locations.js
 
 ## User stories
@@ -102,8 +102,8 @@ npm run start
 ```
 
 References:
--[Web App fall 2020](https://github.com/denisecase/web-app-2020-fall)
--[Talk-2-treasure-8](https://github.com/sumana-reddy/talk-2-treasure-8)
+- [Web App fall 2020](https://github.com/denisecase/web-app-2020-fall)
+- [Talk-2-treasure-8](https://github.com/sumana-reddy/talk-2-treasure-8)
 
 
 
