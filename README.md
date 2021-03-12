@@ -101,6 +101,10 @@ Until error handling is complete, a clean shutdown is better.
 npm run start
 ```
 
+References:
+-[Web App fall 2020](https://github.com/denisecase/web-app-2020-fall)
+-[Talk-2-treasure-8](https://github.com/sumana-reddy/talk-2-treasure-8)
+
 
 
 
