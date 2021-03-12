@@ -8,7 +8,7 @@ A location based gaming app that helps the user to find the treasure location. F
 - https://kharika17.github.io/Group-11-Full-stack-app/
 
 ## Link shows 2-color for home page ("/")
-- [heroku link]()
+
 
 ## Requirements
 - location model - with your geo-specific attributes
