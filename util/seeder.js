@@ -29,16 +29,12 @@ module.exports = async (db) => {
         await db.models.Location.bulkCreate(
             [
                 // first quest locations........
-                { id: 11, name: 'Bearcat football stadium' },
-                { id: 12, name: 'Colden Pond' },
-                { id: 13, name: 'Bearcat Soccer field' },
-                { id: 14, name: 'Field House' },
+                { locationId: 11, locationName: 'Bearcat football stadium',locationLatitude: 40.35156,locationLongitude: -94.88267 },
+                { locationId: 12, locationName: 'Colden Pond',locationLatitude: 40.35112,locationLongitude: -94.88220 },
+                { locationId: 13, locationName: 'Bearcat Soccer field',locationLatitude: 40.35139,locationLongitude: -94.88289 },
+                { locationId: 14, locationName: 'Field House',locationLatitude: 40.35156,locationLongitude: -94.88254 },
 
-                // second quest locations........
-                { id: 21, name: 'Bell tower' },
-                { id: 22, name: 'Bearcat football stadium' },
-                { id: 23, name: 'Colden Pond' },
-                { id: 24, name: 'Bearcat Soccer field' },
+               
 
        ],
             { validate: true } // add options object to call new model validators
