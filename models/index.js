@@ -3,7 +3,7 @@
  *  Updated process all files in the models folder
  *  rather than explicitly calling require for each
  *
- *  @author Denise Case <dcase@nwmissouri.edu>
+ * 
  *
  */
 const dotenv = require('dotenv');

@@ -10,6 +10,7 @@ const router = express.Router();
 
 const appTitle = 'Group 11-Full stack app';
 const appSubTitle = 'Gaming app';
+
 /* GET home page. */
 router.get('/', (req, res) => {
     return res.render('index.ejs', {

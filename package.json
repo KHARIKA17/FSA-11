@@ -4,8 +4,12 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint .",
+    "lint-fix": "eslint --fix .",
+    "prettier": "prettier --write .",
+    "dev": "nodemon ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/www"
   },
   "repository": {
     "type": "git",
@@ -24,9 +28,9 @@
     "dotenv": "latest",
     "ejs": "latest",
     "express": "latest",
-    "express-ejs-layouts": "latest",
+    "express-ejs-layouts": "^2.5.0",
     "express-session": "latest",
-    "express-status-monitor": "latest",
+    "express-status-monitor": "^1.2.3",
     "express-validator": "latest",
     "fs": "0.0.2",
     "helmet": "latest",
@@ -41,7 +45,7 @@
     "passport-local": "latest",
     "pg": "latest",
     "pg-hstore": "latest",
-    "sequelize": "^6.5.0",
+    "sequelize": "latest",
     "sequelize-cli": "latest",
     "serve-favicon": "latest",
     "winston": "latest"

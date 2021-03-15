@@ -2,7 +2,6 @@
  *  Location controller
  *  Handles requests related to this resource (see routes)
  *
- * @author Denise Case <dcase@nwmissouri.edu>
  */
 // const { ValidationError } = require('sequelize');
 const LOG = require('../util/logger');

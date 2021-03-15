@@ -18,7 +18,7 @@
  *   debug: 5,
  *   silly: 6
  *
- * @author Denise Case <dcase@nwmissouri.edu>
+ *
  *
  */
 
