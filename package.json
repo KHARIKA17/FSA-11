@@ -4,7 +4,11 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "lint": "eslint .",	
+    "lint-fix": "eslint --fix .",	
+    "prettier": "prettier --write .",	
+    "dev": "nodemon ./bin/www",
+    "start": "node ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,10 +27,9 @@
     "consolidate": "latest",
     "dotenv": "latest",
     "ejs": "latest",
-    "express": "^4.17.1",
     "express-ejs-layouts": "latest",
     "express-session": "latest",
-    "express-status-monitor": "^1.2.3",
+    "express-status-monitor": "latest",
     "express-validator": "latest",
     "fs": "0.0.2",
     "helmet": "latest",

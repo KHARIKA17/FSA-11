@@ -8,8 +8,8 @@ LOG.info('routes/index.js: STARTING custom routes......');
 const router = express.Router();
 
 
-const appTitle = 'Group 11-Full stack app';
-const appSubTitle = 'Gaming app';
+const appTitle = 'Group-11 Full Stack App';
+const appSubTitle = 'Group-11';
 /* GET home page. */
 router.get('/', (req, res) => {
     return res.render('index.ejs', {
