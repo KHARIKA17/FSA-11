@@ -2,7 +2,7 @@
 const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
 const path = require('path'); // builds path strings
-const favicon = require('serve-favicon');
+// const favicon = require('serve-favicon');
 const morgan = require('morgan'); // logging
 
 // dependencies - allow multiple view engines
