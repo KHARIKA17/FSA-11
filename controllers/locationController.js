@@ -2,7 +2,8 @@
  *  Location controller
  *  Handles requests related to this resource (see routes)
  *
- * @author Denise Case <dcase@nwmissouri.edu>
+ * @author Harika kulkarni
+ * @author gundupooja
  */
 // const { ValidationError } = require('sequelize');
 const LOG = require('../util/logger');
@@ -59,11 +60,7 @@ module.exports.saveNew = async (req, res) => {
     await context.models.Location.create(req.body);
     return res.redirect('/location');
   } catch (err) {
-    // if (err instanceof ValidationError) {
-    //   const item = await prepareInvalidItem(err, req);
-    //   res.locals.location = item;
-    //   return res.render('location/create.ejs', { title: tabTitle, res });
-    // }
+    
     return res.redirect('/location');
   }
 };
@@ -79,11 +76,7 @@ module.exports.saveEdit = async (req, res) => {
     LOG.info(`Updated: ${JSON.stringify(updated)}`);
     return res.redirect('/location');
   } catch (err) {
-    // if (err instanceof ValidationError) {
-    //   const item = await prepareInvalidItem(err, req);
-    //   res.locals.location = item;
-    //   return res.render('location/edit.ejs', { title: tabTitle, res });
-    // }
+    
     return res.redirect('/location');
   }
 };
