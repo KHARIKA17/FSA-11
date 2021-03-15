@@ -1,4 +1,4 @@
 export default [
-    {status_message : "This is color Purple"},
-    {status1_message : "This is color yellow."}
+    {status_message : "Yahoo! Congratulations, you have reached the target location"},
+    {status1_message : "Sorry, you are outside the target location"}
 ]

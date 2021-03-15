@@ -2,9 +2,8 @@
  *  Model index.js - adds all model definitions into sequelize
  *  Updated process all files in the models folder
  *  rather than explicitly calling require for each
- *
- * 
- *
+ *  @author harika 
+ *  @author gundupooja
  */
 const dotenv = require('dotenv');
 const fs = require('fs');
