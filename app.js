@@ -67,7 +67,7 @@ app.use(baseUrl, require('./routes/index'));
 https://github.com/mdn/express-locallibrary-tutorial/blob/master/app.js
 app.use((req, res, err) => {
   // set locals, only providing errors in development
-  res.locals.error = req.app.get('env') === 'production' ? err : {};
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
   // render the error page
   res.status(err.status || 500);
   res.render('error.ejs', { title: 'Error', res });
