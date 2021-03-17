@@ -38,8 +38,10 @@ router.post("/delete/:id", controller.deleteItem);
 router.get("/", controller.showIndex);
 router.get("/create", controller.showCreate);
 router.get("/details/:id", controller.showDetails);
-router.get("/edit/:id", controller.showEdit);
+router.get("/location/edit/:id", controller.showEdit);
 router.get("/delete/:id", controller.showDelete);
+
+router.get("/location", controller.showIndex);
 
 LOG.info("Loaded locations routes.");
 
