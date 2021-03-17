@@ -3,7 +3,7 @@
  *  Handles requests related to this resource (see routes)
  *
  */
-// const { ValidationError } = require('sequelize');
+const { ValidationError } = require('sequelize');
 const LOG = require("../util/logger");
 const db = require("../models/index")();
 
@@ -52,6 +52,18 @@ module.exports.findOne = async (req, res) => {
 
 // POST /save
 module.exports.saveNew = async (req, res) => {
+  // try {
+  //   const context = await db;
+  //   await context.models.Location.create(req.body);
+  //   return res.redirect('/location');
+  // } catch (err) {
+  //   if (err instanceof ValidationError) {
+  //     const item = await prepareInvalidItem(err, req);
+  //     res.locals.location = item;
+  //     return res.render('location/create.ejs', { title: location, res });
+  //   }
+  //   return res.redirect('/location');
+  // }
   try {
     const context = await db;
     await context.models.Location.create(req.body);
@@ -168,3 +180,4 @@ module.exports.showEdit = async (req, res) => {
       });
     });
 };
+

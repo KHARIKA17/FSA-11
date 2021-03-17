@@ -31,9 +31,9 @@ module.exports = async (db) => {
         // first quest locations........
         {
           locationId: 11,
-          locationName: "Bearcat football stadium",
+          locationName: 'Bearcat football stadium',
           locationLatitude: 40.35156,
-          locationLongitude: -94.88267,
+          locationLongitude: -94.88267
         },
         {
           locationId: 12,
