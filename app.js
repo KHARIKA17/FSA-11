@@ -63,14 +63,14 @@ const baseUrl = process.env.BASE_URL || '/';
 app.use(baseUrl, require('./routes/index'));
 
 // error handler from
-// https://github.com/mdn/express-locallibrary-tutorial/blob/master/app.js
-// app.use((req, res, err) => {
-//   // set locals, only providing errors in development
-//   res.locals.error = req.app.get('env') === 'development' ? err : {};
-//   // render the error page
-//   res.status(err.status || 500);
-//   res.render('error.ejs', { title: 'Error', res });
-// });
+https://github.com/mdn/express-locallibrary-tutorial/blob/master/app.js
+app.use((req, res, err) => {
+  // set locals, only providing errors in development
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
+  // render the error page
+  res.status(err.status || 500);
+  res.render('error.ejs', { title: 'Error', res });
+});
 
 // export the express app (helpful for testing)
 // see bin/www.js for environment-specific startup
