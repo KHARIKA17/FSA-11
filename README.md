@@ -16,7 +16,7 @@ A location based gaming app that helps the user to find the treasure location. F
 
 ## Link shows 2-color for home page ("/")
 
--
+- https://grp-11-full-stack-app.herokuapp.com/
 
 ## Requirements
 
