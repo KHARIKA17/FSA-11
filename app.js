@@ -2,7 +2,7 @@
 const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
 const path = require('path'); // builds path strings
-// const favicon = require('serve-favicon');
+const favicon = require('serve-favicon');
 const morgan = require('morgan'); // logging
 
 // dependencies - allow multiple view engines
@@ -14,12 +14,13 @@ const helmet = require('helmet'); // safer http headers
 const compression = require('compression'); // smaller=faster
 
 // dependencies - passport authentication
-const flash = require('connect-flash'); // used with passport
-const passport = require('passport');
-const session = require('express-session');
+// const flash = require('connect-flash'); // used with passport
+// const passport = require('passport');
+// const session = require('express-session');
 
 // bring in logger
 const LOG = require('./util/logger');
+
 // configure app variables
 const isProduction = process.env.NODE_ENV === 'production';
 LOG.info('Environment isProduction = ', isProduction);
@@ -39,9 +40,9 @@ app.use(expressStatusMonitor());
 // app middleware - basic
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); // bodyParser not needed
-// app.use(express.static(path.join(__dirname, 'public')));
-// app.use(express.static('public'));
-// app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('public'));
+app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 app.use(expressLayouts);
 app.use(morgan('combined'));
 
@@ -49,7 +50,7 @@ app.use(morgan('combined'));
 // app.use(helmet()); // security, http headers
 app.use(compression()); // compress all routes
 
-// app middleware - expose passport req.user to views
+// app middleware - expose passport req.location to views
 app.use((req, res, next) => {
   res.locals.location = req.location;
   next();
@@ -63,14 +64,38 @@ app.use(baseUrl, require('./routes/index'));
 
 // error handler from
 // https://github.com/mdn/express-locallibrary-tutorial/blob/master/app.js
-app.use((req, res, err) => {
-  // set locals, only providing errors in development
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error.ejs', { title: 'Error', res });
-});
+// app.use((req, res, err) => {
+//   // set locals, only providing errors in development
+//   res.locals.error = req.app.get('env') === 'development' ? err : {};
+//   // render the error page
+//   res.status(err.status || 500);
+//   res.render('error.ejs', { title: 'Error', res });
+// });
 
 // export the express app (helpful for testing)
 // see bin/www.js for environment-specific startup
 module.exports = app;
+
+
+// const express = require('express')
+// const app = express()
+// const port = process.env.PORT || 3000
+
+// app.get('/', (req, res) => {
+//   res.send('Welcome to Location based gaming app.')
+// })
+// app.get('/about', (req, res) => {
+//     res.send(' Displays the about page of this app. ')
+//   })
+// app.get('/contact', (req, res) => {
+//     res.send(' Displays the contact page of this app. ')
+//   })
+// app.get('/help', (req, res) => {
+//     res.send(' Displays the help page of this app. ')
+//   })
+// app.get('/help/:topic', (req, res) => {
+//     res.send(` How can I help you with this ${req.params.topic}. `)
+//   })
+// app.listen(port, () => {
+//   console.log(`Example app listening at http://localhost:${port}`)
+// })

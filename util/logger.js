@@ -22,7 +22,7 @@
  *
  */
 
-const winston = require('winston');
+const winston = require("winston");
 
 /**
  * A custom Winston logger that can write to
@@ -47,8 +47,8 @@ const logger = winston.createLogger({
     //   level: 'info',
     // }),
     new winston.transports.File({
-      filename: 'errors.log',
-      level: 'error',
+      filename: "errors.log",
+      level: "error",
     }),
   ],
 });

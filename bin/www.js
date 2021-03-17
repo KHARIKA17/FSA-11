@@ -12,10 +12,10 @@
 
 // Import dependencies ............................................
 
-const http = require('http');
-const dotenv = require('dotenv');
-const LOG = require('../util/logger');
-const app = require('../app');
+const http = require("http");
+const dotenv = require("dotenv");
+const LOG = require("../util/logger");
+const app = require("../app");
 
 // Helper functions defined first ...................................
 
@@ -39,7 +39,7 @@ const normalizePort = (val) => {
  * Load environment variables from .env file,
  *  where API keys and passwords can be configured.
  */
-const vars = dotenv.config({ path: '.env' });
+const vars = dotenv.config({ path: ".env" });
 if (vars.error) {
   throw vars.error;
 }
@@ -49,7 +49,7 @@ LOG.info(`Environment variables loaded: ${vars.parsed}`);
  * Get port from environment and store in Express.
  */
 const port = normalizePort(process.env.PORT);
-app.set('port', port);
+app.set("port", port);
 LOG.info(`Server Launch at port: ${port}`);
 
 /**
@@ -58,17 +58,17 @@ LOG.info(`Server Launch at port: ${port}`);
  * Provide friendly error messages.
  */
 const onError = (error) => {
-  if (error.syscall !== 'listen') {
+  if (error.syscall !== "listen") {
     throw error;
   }
-  const bind = typeof port === 'string' ? `Pipe ${port}` : `Port ${port}`;
+  const bind = typeof port === "string" ? `Pipe ${port}` : `Port ${port}`;
   // handle specific listen errors with friendly messages
   switch (error.code) {
-    case 'EACCES':
+    case "EACCES":
       LOG.info(`${bind} requires elevated privileges`);
       process.exit(1);
       break;
-    case 'EADDRINUSE':
+    case "EADDRINUSE":
       LOG.info(`${bind} is already in use`);
       process.exit(1);
       break;
@@ -93,13 +93,13 @@ const server = http.createServer(app);
  */
 const onListening = async () => {
   try {
-    const db = await require('../models/index')();
-    await require('../util/seeder')(db);
+    const db = await require("../models/index")();
+    await require("../util/seeder")(db);
   } catch (err) {
     LOG.error(`ERROR with database:${err.message}`);
   }
   const addr = server.address();
-  const bind = typeof addr === 'string' ? `pipe ${addr}` : `port ${addr.port}`;
+  const bind = typeof addr === "string" ? `pipe ${addr}` : `port ${addr.port}`;
   LOG.info(`Listening on ${bind}`);
 };
 
@@ -107,5 +107,5 @@ const onListening = async () => {
  * Listen on provided port, on all network interfaces.
  */
 server.listen(port);
-server.on('error', onError);
-server.on('listening', onListening);
+server.on("error", onError);
+server.on("listening", onListening);

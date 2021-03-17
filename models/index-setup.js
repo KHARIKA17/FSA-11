@@ -12,10 +12,8 @@
 
 module.exports = async (sequelize) => {
   const {
-    
     Location,
     // Clue,
-    
   } = await sequelize.models;
 
   // one location can have many clues
