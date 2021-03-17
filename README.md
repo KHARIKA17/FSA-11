@@ -1,24 +1,30 @@
 # FSA-11
+
 Welcome to Location based Game Application.
 
 ## Overview
-A location based gaming app that helps the user to find the treasure location. First it checks the device coordinates with the target location and tells the user whether he/she is inside or outside the target location. when user clicks/touches on the first color then it provides a valid treasure location and a confirmation message will appear that a particular location is selected.Even after confirmation user is provided with option to select another location, if so the user can start the game from beginning.when the user clicks or touches the second color, if the user is inside the treasure location, user will hear information that a treasure is earned, if the user is outside the target location, user will hear information about help like in direction to walk, how far away or any other clue. 
+
+A location based gaming app that helps the user to find the treasure location. First it checks the device coordinates with the target location and tells the user whether he/she is inside or outside the target location. when user clicks/touches on the first color then it provides a valid treasure location and a confirmation message will appear that a particular location is selected.Even after confirmation user is provided with option to select another location, if so the user can start the game from beginning.when the user clicks or touches the second color, if the user is inside the treasure location, user will hear information that a treasure is earned, if the user is outside the target location, user will hear information about help like in direction to walk, how far away or any other clue.
 
 ## Github published link
+
 - https://kharika17.github.io/Group-11-Full-stack-app/
 
 ## Heroku published link:
+
 - https://grp-11-full-stack-app.herokuapp.com/
 
 ## Link shows 2-color for home page ("/")
-- 
+
+-
 
 ## Requirements
+
 - location model - with your geo-specific attributes
 - location controller
 - location routes
 - back-end app (execution begins here)
-- location model - what attributes are you using? 
+- location model - what attributes are you using?
 - 1.default id
 - 2.name
 - what location shape are you using? <B>Quad</B>
@@ -26,13 +32,15 @@ A location based gaming app that helps the user to find the treasure location. F
 - sample location data: https://github.com/KHARIKA17/Group-11-Full-stack-app/blob/main/init-locations.js
 
 ## User stories
+
 - [ ] As a player, I want to touch/click the first color to request a valid (treasure) location.
-- [ ] As a player, I want to hear confirmation that a location has been selected (so I can I can begin searching). 
-- [ ] As a player, I want to touch/click the second color:  If I am outside the treasure location, I want to hear information to help me find the treasure location (clue? how far away? what direction to walk?)
+- [ ] As a player, I want to hear confirmation that a location has been selected (so I can I can begin searching).
+- [ ] As a player, I want to touch/click the second color: If I am outside the treasure location, I want to hear information to help me find the treasure location (clue? how far away? what direction to walk?)
 - [ ] As a player, I want to touch/click the second color: If I am inside the treasure location, I want to hear and see confirmation that I have earned this treasure.
-- [ ] As a player, after confirmation that I have earned a location: I want the game to ask me if I would like to select another location. If I select yes, we reset and begin again. 
+- [ ] As a player, after confirmation that I have earned a location: I want the game to ask me if I would like to select another location. If I select yes, we reset and begin again.
 
 ## Stack
+
 - Platform: Node (v15.0.1)
 - Web Framework: Express
 - View engine: EJS
@@ -40,8 +48,8 @@ A location based gaming app that helps the user to find the treasure location. F
 - ORM: PostgreSQL
 - Coding standards: Prettier/ESlint
 
-
 ## CI/CD
+
 -Auto-deploying from our main repo.
 
 ## Team Members:
@@ -66,6 +74,7 @@ A location based gaming app that helps the user to find the treasure location. F
 - [Heroku CLI - to publish](https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up)
 - [Heroku login](https://id.heroku.com/login)
 - [PostgreSQL local install](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
+
 ## How to Contribute
 
 ### Step 1 - Get fresh code.
@@ -92,6 +101,7 @@ npm run prettier
 npm run lint
 npm run lint-fix
 ```
+
 ## Start Options
 
 Start the app by running npm run start.
@@ -102,10 +112,6 @@ npm run start
 ```
 
 ## References:
+
 - [Web App fall 2020](https://github.com/denisecase/web-app-2020-fall)
 - [Talk-2-treasure-8](https://github.com/sumana-reddy/talk-2-treasure-8)
-
-
-
-
-
