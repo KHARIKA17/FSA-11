@@ -35,13 +35,18 @@ router.post("/delete/:id", controller.deleteItem);
 
 // handle five requests for webpages (HTTP GET)
 
-router.get("/", controller.showIndex);
+// router.get("/", controller.showIndex);
 router.get("/create", controller.showCreate);
 router.get("/details/:id", controller.showDetails);
 router.get("/location/edit/:id", controller.showEdit);
 router.get("/delete/:id", controller.showDelete);
 
 router.get("/location", controller.showIndex);
+
+function checkUserAuth(req, res, next) {
+    if (req.session.user) return next();
+    return next(new NotAuthorizedError());
+  }
 
 LOG.info("Loaded locations routes.");
 
