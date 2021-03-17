@@ -1,6 +1,7 @@
 header{
   position: absolute;
   left: 41%;
+  text-align: center;
 }
 
 article {
@@ -43,4 +44,5 @@ article {
 
 .navbar-brand{
   text-align: center;
+
 }

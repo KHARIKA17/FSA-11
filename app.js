@@ -41,6 +41,7 @@ app.use(expressStatusMonitor());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); // bodyParser not needed
 app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(express.static('public'));
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 app.use(expressLayouts);
@@ -66,7 +67,7 @@ app.use(baseUrl, require('./routes/index'));
 https://github.com/mdn/express-locallibrary-tutorial/blob/master/app.js
 app.use((req, res, err) => {
   // set locals, only providing errors in development
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+  res.locals.error = req.app.get('env') === 'production' ? err : {};
   // render the error page
   res.status(err.status || 500);
   res.render('error.ejs', { title: 'Error', res });
