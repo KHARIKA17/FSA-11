@@ -43,8 +43,8 @@
           <tbody>
             <% for(let i = 0; i< locations.length; i++) { %>
             <tr>
-              <th scope="row"><%= locations[i].id %></th>
-              <td><%= locations[i].name%></td>
+              <th scope="row"><%= locations[i].locationId %></th>
+              <td><%= locations[i].locationName%></td>
               <td>
                 <a class="btn btn-primary details" href="../location/details/<%=locations[i].id%>"><i
                     class="fab fa-sistrix" title="test"></i></a>
