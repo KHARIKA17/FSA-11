@@ -59,8 +59,8 @@ app.use((req, res, next) => {
 
 LOG.info('app middleware configured');
 
-const purl = process.env.BASE_URL || '/aboutpooja';
-app.use(purl,require('./routes/index'));
+// const purl = process.env.BASE_URL || '/aboutpooja';
+// app.use(purl,require('./routes/index'));
 // app middleware - configure routing
 const baseUrl = process.env.BASE_URL || '/';
 app.use(baseUrl, require('./routes/index'));
@@ -87,9 +87,8 @@ module.exports = app;
 // app.get('/', (req, res) => {
 //   res.send('Welcome to Location based gaming app.')
 // })
-app.get('/aboutp', (req, res) => {ss
-    res.send(' Gdp-2! Dr.Denise Case is awesome! ')
-  })
+
+  
 // app.get('/contact', (req, res) => {
 //     res.send(' Displays the contact page of this app. ')
 //   })

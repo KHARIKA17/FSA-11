@@ -37,7 +37,6 @@ router.post("/delete/:id", controller.deleteItem);
 
 router.get("/", controller.showIndex);
 router.get("/create", controller.showCreate);
-router.get("/aboutp", controller.showCreate);
 router.get("/details/:id", controller.showDetails);
 router.get("/location/edit/:id", controller.showEdit);
 router.get("/delete/:id", controller.showDelete);

@@ -16,6 +16,12 @@ router.get("/", (req, res) => {
     subTitle: appSubTitle,
   });
 });
+/* about page. */
+router.get("/aboutp", (req, res) => {
+  return res.render("aboutp.ejs",{
+    title: appTitle,
+  } );
+});
 
 router.get("/index", (req, res) => {
   return res.redirect("/");
@@ -26,11 +32,7 @@ try {
 } catch (err) {
   LOG.error(`ERROR: ${err.message}`);
 }
-try {
-  router.use("/aboutp", locationRoutes);
-} catch (err) {
-  LOG.error(`ERROR: ${err.message}`);
-}
+
 
 LOG.info("routes/index.js: ENDING custom routes......");
 
