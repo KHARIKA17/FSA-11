@@ -23,12 +23,12 @@ router.get("/aboutp", (req, res) => {
   } );
 });
 
-/* about page. */
-router.get("/about", (req, res) => {
-  return res.render("about.ejs",{
-    title: appTitle,
-  } );
-});
+// /* about page. */
+// router.get("/about", (req, res) => {
+//   return res.render("about.ejs",{
+//     title: appTitle,
+//   } );
+// });
 
 router.get("/index", (req, res) => {
   return res.redirect("/");
