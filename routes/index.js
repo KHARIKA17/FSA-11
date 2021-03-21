@@ -2,6 +2,7 @@ const express = require("express");
 const LOG = require("../util/logger");
 
 const locationRoutes = require("./location.routes");
+const place_locationRoutes = require("./place_location.routes");
 
 LOG.info("routes/index.js: STARTING custom routes......");
 const router = express.Router();
@@ -36,6 +37,12 @@ router.get("/index", (req, res) => {
 
 try {
   router.use("/location", locationRoutes);
+} catch (err) {
+  LOG.error(`ERROR: ${err.message}`);
+}
+
+try {
+  router.use("/place_location", place_locationRoutes);
 } catch (err) {
   LOG.error(`ERROR: ${err.message}`);
 }

@@ -4,3 +4,19 @@ error: ERROR: Location seeding -  {"timestamp":"2021-03-15T07:08:48.124Z"}
 error: ERROR: Location seeding -  {"timestamp":"2021-03-15T07:19:07.089Z"}
 error: ERROR: Location seeding -  {"timestamp":"2021-03-15T07:28:53.323Z"}
 error: ERROR: Location seeding -  {"timestamp":"2021-03-15T07:32:18.090Z"}
+error: ERROR SAVING ITEM {"timestamp":"2021-03-21T20:07:07.421Z"}
+error: Captured validation error:  {"timestamp":"2021-03-21T20:07:07.424Z"}
+error: ERROR SAVING ITEM {"timestamp":"2021-03-21T20:10:08.404Z"}
+error: Captured validation error:  {"timestamp":"2021-03-21T20:10:08.406Z"}
+error: ERROR SAVING ITEM {"timestamp":"2021-03-21T20:19:45.326Z"}
+error: Captured validation error:  {"timestamp":"2021-03-21T20:19:45.328Z"}
+error: ERROR SAVING ITEM {"timestamp":"2021-03-21T20:19:55.850Z"}
+error: Captured validation error:  {"timestamp":"2021-03-21T20:19:55.851Z"}
+error: ERROR SAVING ITEM {"timestamp":"2021-03-21T20:19:57.072Z"}
+error: Captured validation error:  {"timestamp":"2021-03-21T20:19:57.074Z"}
+error: ERROR SAVING ITEM {"timestamp":"2021-03-21T20:21:33.974Z"}
+error: Captured validation error:  {"timestamp":"2021-03-21T20:21:33.976Z"}
+error: ERROR SAVING ITEM {"timestamp":"2021-03-21T20:26:10.259Z"}
+error: Captured validation error:  {"timestamp":"2021-03-21T20:26:10.261Z"}
+error: ERROR SAVING ITEM {"timestamp":"2021-03-21T20:29:42.601Z"}
+error: Captured validation error:  {"timestamp":"2021-03-21T20:29:42.603Z"}

@@ -1,0 +1,63 @@
+
+<% if (locals.place_locations.success) { %>
+    <div class="alert alert-success" role="alert"><%- place_location.success %></div>
+    <% } %>
+    
+    <% if (locals.place_locations.error) { %>
+    <div class="alert alert-danger" role="alert"><%- place_location.error %></div>
+    <% } %>
+    
+    <div class="card">
+      <div class="card-header">
+        <ul class="nav nav-pills w-100">
+          <li class="nav-pill active">
+            <a class="nav-link">Place_locations</a>
+          </li>
+          <li class="nav-pill ml-auto">
+            <a class="nav-link active" href="/place_location/create"><i class="fas fa-plus"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="card-body">
+    
+        <% if(place_locations.length) { %>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Name</th>
+              <!-- <th scope="col">Lifespan</th>
+              <th scope="col">IsPet?</th> -->
+              <th >Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% for(let i = 0; i< place_locations.length; i++) { %>
+            <tr>
+              <th scope="row"><%= place_locations[i].id %></th>
+              <td><%= place_locations[i].name%></td>
+              <!-- <td><%= place_locations[i].lifeSpan%></td>
+              <td><%= place_locations[i].isPet%></td> -->
+              <td>
+                <a class="btn btn-primary details" href="../place_location/details/<%=place_locations[i].id%>"><i
+                    class="fab fa-sistrix" title="test"></i></a>
+                <a class="btn btn-success edit" href="../place_location/edit/<%=place_locations[i].id%>"><i class="fas fa-user-edit"></i></a>
+                <a class="btn btn-danger delete" href="../place_location/delete/<%=place_locations[i].id%>"><i
+                    class="fas fa-trash-alt"></i></a>
+              </td>
+            </tr>
+            <% } %>
+          </tbody>
+        </table>
+        <% } %>
+    
+        <!-- if result is empty -->
+        <% if(!place_locations.length) { %>
+        <p class="text-center">No Locations found!</p>
+        <% } %>
+    
+        <br>
+        <h3>Mouse over icons to see where you will go.</h3>
+    
+      </div>
+    </div>
