@@ -18,18 +18,6 @@ A location based gaming app that helps the user to find the treasure location. F
 
 - https://grp-11-full-stack-app.herokuapp.com/
 
-## Requirements
-
-- location model - with your geo-specific attributes
-- location controller
-- location routes
-- back-end app (execution begins here)
-- location model - what attributes are you using?
-- 1.default id
-- 2.name
-- what location shape are you using? <B>Quad</B>
-- what is the source for your location logic? [Talk-2-treasure-8](https://github.com/sumana-reddy/talk-2-treasure-8)
-- sample location data: https://github.com/KHARIKA17/Group-11-Full-stack-app/blob/main/init-locations.js
 
 ## User stories
 
