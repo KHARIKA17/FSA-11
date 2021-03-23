@@ -20,7 +20,7 @@ module.exports.findAll = async (req, res) => {
     include: [
       {
         model: (await db).models.Location,
-        attributes: ["id", "name"],
+        attributes: ["locationId", "locationName"],
       },
     ],
   })
@@ -36,14 +36,14 @@ module.exports.findAll = async (req, res) => {
 
 // GET one JSON by ID
 module.exports.findOne = async (req, res) => {
-  const { id } = req.params;
-  (await db).models.Location.findByPk(id)
+  const { locationId } = req.params;
+  (await db).models.Location.findByPk(locationId)
     .then((data) => {
       res.send(data);
     })
     .catch((err) => {
       res.status(500).send({
-        message: `Error retrieving item with id=${id}: ${err.message}`,
+        message: `Error retrieving item with id=${locationId}: ${err.message}`,
       });
     });
 };
@@ -84,10 +84,10 @@ module.exports.saveNew = async (req, res) => {
 // POST /save/:id
 module.exports.saveEdit = async (req, res) => {
   try {
-    const reqId = parseInt(req.params.id, 10);
+    const reqId = parseInt(req.params.locationId);
     const context = await db;
     const updated = await context.models.Location.update(req.body, {
-      where: { id: reqId },
+      where: { locationId: reqId },
     });
     LOG.info(`Updated: ${JSON.stringify(updated)}`);
     return res.redirect("/location");
@@ -99,9 +99,9 @@ module.exports.saveEdit = async (req, res) => {
 // POST /delete/:id
 module.exports.deleteItem = async (req, res) => {
   try {
-    const reqId = parseInt(req.params.id, 10);
+    const reqId = parseInt(req.params.locationId);
     const deleted = (await db).models.Location.destroy({
-      where: { id: reqId },
+      where: { locationId: reqId },
     });
     if (deleted) {
       return res.redirect("/location");
@@ -155,8 +155,8 @@ module.exports.showCreate = async (req, res) => {
 
 // GET /delete/:id
 module.exports.showDelete = async (req, res) => {
-  const { id } = req.params;
-  (await db).models.Location.findByPk(id)
+  const { locationId } = req.params;
+  (await db).models.Location.findByPk(locationId)
     .then((data) => {
       res.locals.location = data;
       if (data) {
@@ -167,37 +167,37 @@ module.exports.showDelete = async (req, res) => {
     })
     .catch((err) => {
       res.status(500).send({
-        message: `Error retrieving item with id=${id}: ${err.message}`,
+        message: `Error retrieving item with locationId=${locationId}: ${err.message}`,
       });
     });
 };
 
 // GET /details/:id
 module.exports.showDetails = async (req, res) => {
-  const { id } = req.params;
-  (await db).models.Location.findByPk(id)
+  const { locationId } = req.params;
+  (await db).models.Location.findByPk(locationId)
     .then((data) => {
       res.locals.location = data;
       res.render("location/details.ejs", { title: tabTitle, res });
     })
     .catch((err) => {
       res.status(500).send({
-        message: `Error retrieving item with id=${id}: ${err.message}`,
+        message: `Error retrieving item with id=${locationId}: ${err.message}`,
       });
     });
 };
 
 // GET /edit/:id
 module.exports.showEdit = async (req, res) => {
-  const { id } = req.params;
-  (await db).models.Location.findByPk(id)
+  const { locationId } = req.params;
+  (await db).models.Location.findByPk(locationId)
     .then((data) => {
       res.locals.location = data;
       res.render("location/edit.ejs", { title: tabTitle, res });
     })
     .catch((err) => {
       res.status(500).send({
-        message: `Error retrieving item with id=${id}: ${err.message}`,
+        message: `Error retrieving item with id=${locationId}: ${err.message}`,
       });
     });
 };

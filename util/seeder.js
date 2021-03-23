@@ -24,20 +24,20 @@ module.exports = async (db) => {
   } catch (err) {
     LOG.error(`ERROR: on sync process - ${err.message}`);
   }
-  try {
-    await db.models.Place_location.bulkCreate(
-      [
-        { name: 'adminblock'}, 
-        { name: 'wabash'}, 
-        { name: 'villageo'}, 
-      ],
-      { validate: true } // add options object to call new model validators
-    );
-    const numPlace_locations = await db.models.Place_location.count();
-    LOG.info(`Seeded ${numPlace_locations} place_locations.`);
-  } catch (err) {
-    LOG.error(`ERROR: Location- ${err.message}`);
-  }
+  // try {
+  //   await db.models.Place_location.bulkCreate(
+  //     [
+  //       { name: 'adminblock'}, 
+  //       { name: 'wabash'}, 
+  //       { name: 'villageo'}, 
+  //     ],
+  //     { validate: true } // add options object to call new model validators
+  //   );
+  //   const numPlace_locations = await db.models.Place_location.count();
+  //   LOG.info(`Seeded ${numPlace_locations} place_locations.`);
+  // } catch (err) {
+  //   LOG.error(`ERROR: Location- ${err.message}`);
+  // }
 
   try {
     await db.models.Location.bulkCreate(

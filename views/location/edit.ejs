@@ -1,10 +1,4 @@
-<!--
-*  Location edit view
-*  Uses HTML and embedded JavaScript (EJS) 
-*  to dyanmically create a webpage to edit the resource.
-*
-* 
--->
+<br>
 
 <div class="card">
     <div class="card-header">
@@ -14,14 +8,26 @@
       <form action="/location/save/<%= location.locationId %>" method="post">
   
         <div class="form-group">
-          <label for="locationName">Name:</label>
+          <label for="locationName">Location Name:</label>
           <input type="text" class="form-control" id="locationName" name="locationName" value="<%= location.locationName %>" autocomplete="off">
         </div>
        
         <br>
+
+        <div class="form-group">
+          <label for="locationLatitude">Location Latitude:</label>
+          <input type="text" class="form-control" id="locationLatitude" name="locationLatitude" value="<%= location.locationLatitude %>" autocomplete="off">
+        </div>
+        <br>
+
+        <div class="form-group">
+          <label for="locationLongitude">Location Longitude:</label>
+          <input type="text" class="form-control" id="locationLongitude" name="locationLongitude" value="<%= location.locationLongitude %>" autocomplete="off">
+        </div>
+        <br>
   
         <div class="form-group">
-          <input type="submit" class="btn btn-info" title="Submits a POST /save/:id request" value="Save" />
+          <input type="submit" class="btn btn-info" title="Submits a POST /save/:locationId request" value="Save" />
         </div>
         
       </form>

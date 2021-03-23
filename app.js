@@ -59,14 +59,13 @@ app.use((req, res, next) => {
 
 LOG.info('app middleware configured');
 
-// const purl = process.env.BASE_URL || '/aboutpooja';
-// app.use(purl,require('./routes/index'));
+
 // app middleware - configure routing
 const baseUrl = process.env.BASE_URL || '/';
 app.use(baseUrl, require('./routes/index'));
 
 // error handler from
-https://github.com/mdn/express-locallibrary-tutorial/blob/master/app.js
+// https://github.com/mdn/express-locallibrary-tutorial/blob/master/app.js
 app.use((req, res, err) => {
   // set locals, only providing errors in development
   res.locals.error = req.app.get('env') === 'development' ? err : {};

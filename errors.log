@@ -20,3 +20,5 @@ error: ERROR SAVING ITEM {"timestamp":"2021-03-21T20:26:10.259Z"}
 error: Captured validation error:  {"timestamp":"2021-03-21T20:26:10.261Z"}
 error: ERROR SAVING ITEM {"timestamp":"2021-03-21T20:29:42.601Z"}
 error: Captured validation error:  {"timestamp":"2021-03-21T20:29:42.603Z"}
+error: ERROR: Location- Cannot read property 'bulkCreate' of undefined {"timestamp":"2021-03-22T21:50:03.801Z"}
+error: ERROR: Location- Cannot read property 'bulkCreate' of undefined {"timestamp":"2021-03-22T21:57:42.240Z"}
