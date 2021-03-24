@@ -54,5 +54,5 @@ article {
 }
 
 .form-group_locId{
-  visibility: hidden;
+  display: none;
 }
