@@ -16,9 +16,9 @@ article {
 #status1 {
   height: 200px;
   width: 200px;
-  background: brown;
-  float: left;
-  margin-left: 2px;
+  background:lightcoral;
+  /* float: left;
+  margin-left: 2px; */
   border: 1px solid #ccc;
 }
 
@@ -26,8 +26,8 @@ article {
   height: 200px;
   width: 200px;
   background: orange;
-  float: left;
-  margin-left: 2px;
+  /* float: left;
+  margin-left: 2px; */
   border: 1px solid #ccc;
 }
 
@@ -56,3 +56,22 @@ article {
 .form-group_locId{
   display: none;
 }
+
+html,body{
+  height:100%;
+}
+
+body{
+  display:flex;
+  flex-direction: column;
+}
+
+#container{
+  flex: 1 0 auto;
+}
+
+#reset{
+  color: white;
+  background-color: teal;
+}
+
