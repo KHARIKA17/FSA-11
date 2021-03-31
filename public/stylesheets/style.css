@@ -43,7 +43,7 @@ article {
 }
 
 .navbar-brand{
-  text-align: center;
+  text-align: left;
 
 }
 
@@ -74,4 +74,8 @@ body{
   color: white;
   background-color: teal;
 }
+
+/* .icons{
+  color:green;
+} */
 
