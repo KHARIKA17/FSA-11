@@ -47,6 +47,7 @@ function isValidArguments(device, location) {
 }
 
 export function isInsideQuad(device, location) {
+  console.log(device,location);
   try {
     let checkValid =
       isValidArguments(device, location) &&
@@ -54,8 +55,7 @@ export function isInsideQuad(device, location) {
       isValidType(location) &&
       isValidLocation(location);
     if (checkValid) {
-      let x = device.coords.latitude;
-      let y = device.coords.longitude;
+      let [x,y]=[device.coords.latitude, device.coords.longitude];
 
       let inside = false;
       let coordinates = location.coordinates;
