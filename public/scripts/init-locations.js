@@ -1,35 +1,40 @@
 export default [
   {
-    name: "Villago",
+    name: "Colden pond",
     type: "quad",
     coordinates: [
       {
-        latitude: 40.360857,
-        longitude: -94.888152,
+        latitude: 40.350432552740905, longitude: -94.88331533526484
       },
+      { latitude: 40.35044243036788, longitude: -94.88263487819215 },
+      { latitude: 40.3496522156376, longitude: -94.88254415058246 },
+      { latitude: 40.34966209337887, longitude: -94.88328941309065 },
+    ],
+  },
+  {
+    Name: "B.D Owens Library",
+    type: "quad",
+    coordinates: [
       {
-        latitude: 40.360849,
-        longitude: -94.887489,
+        latitude: 40.35379248029996, longitude: -94.88664157526523
       },
+      { latitude: 40.35376625288228, longitude: -94.88542368602904 },
+      { latitude: 40.3533346213619, longitude: -94.88557942049536 },
+      { latitude: 40.35335914959811, longitude: -94.8864269985441 },
+    ],
+  },
+  {
+    Name: "Horizons west apartments",
+    type: "quad",
+    coordinates: [
       {
-        latitude: 40.360495,
-        longitude: -94.8875,
+        latitude: 40.356209392187104, longitude: -94.88259215855203
       },
-      {
-        latitude: 40.360521,
-        longitude: -94.88821,
-      },
+      { latitude: 40.35618844720869, longitude: -94.88130491448193 },
+      { latitude: 40.3558044547846, longitude: -94.88131407636145 },
+      { latitude: 40.3558044547846, longitude: -94.88261506325078 },
     ],
   },
 
-  {
-    Name: "B.D Owens Library",
-    Latitude: 40.35385,
-    Longitude: -94.88591,
-  },
-  {
-    Name: "Colden Pond",
-    Latitude: 40.35006,
-    Longitude: -94.88307,
-  },
+
 ];
