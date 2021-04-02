@@ -79,6 +79,39 @@ export function isInsideQuad(device, location) {
     console.log("Exception: " + err);
   }
 }
+/* Get directions towards the quad from the current location*/
+export function getLocationDirections(device, location) {
+  let directionArray = [];
+  try {
+    let checkValid =
+      isValidArguments(device, location) &&
+      isValidDevice(device) &&
+      isValidType(location) &&
+      isValidLocation(location);
+    if (checkValid) {
+      let [x, y] = [device.coords.latitude, device.coords.longitude];
+
+      const latitudes = location.coordinates
+        .map((item) => item.latitude)
+        .sort((a, b) => b - a);
+      const longitudes = location.coordinates
+        .map((item) => item.longitude)
+        .sort((a, b) => a - b);
+
+      if (x > latitudes[0] || x > latitudes[1]) directionArray.push("South");
+      else if (x < latitudes[3] || x < latitudes[4])
+        directionArray.push("North");
+
+      if (y < longitudes[0] || y < longitudes[1]) directionArray.push("East");
+      else if (y > longitudes[3] || y > longitudes[4])
+        directionArray.push("West");
+
+      return directionArray;
+    }
+  } catch (err) {
+    console.log("Exception: " + err);
+  }
+}
 
 /* sample code in quiz
 // location-circle.js
