@@ -14,10 +14,7 @@ module.exports = (db, DataTypes) => {
       allowNull: false,
       validate: {
         is: {
-          // use a Regular Expression (regex)
-          // ^starts & ends$ with a letter
-          // no consecutive spaces
-          // TODO: Find more efficient approach
+         
           args: /^([a-zA-Z]+\s)*[a-zA-Z]+$/i  ,
           msg:
             'Name is only letters and single spaces, no numbers or punctuation.',
@@ -62,10 +59,7 @@ module.exports = (db, DataTypes) => {
 
       },
     },
-    // locationValue: {
-    // type: DataTypes.INTEGER,
-    //allowNull: true
-    // }
+    
   }
   );
 };
