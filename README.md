@@ -15,6 +15,11 @@ A location based gaming app that helps the user to find the treasure location. F
 
 - https://grp-11-full-stack-app.herokuapp.com/
 
+## location logic
+- The logic is written inside the function named getLocationDirections in location-quad.js
+- Next,sorting the latitudes of a quest location in descending order and the longitudes in ascending order since they are negative. 
+- When we have that, compare the first two of these values with the relevant point value e.g. latitude with latitude. In case of latitude, if either of the first two values of sorted quest location's latitude is less than the latitude of the given point then we know that the user is located to the north of quad and have to move towards south to reach the logic. 
+- similarly, You can extend this logic to find other locations too.
 
 ## User stories
 
