@@ -99,6 +99,8 @@ dist
 # FuseBox cache
 .fusebox/
 
+.fuse_hidden*
+
 # DynamoDB Local files
 .dynamodb/
 
