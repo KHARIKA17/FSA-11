@@ -29,7 +29,5 @@ module.exports = async (sequelize) => {
     as: "location",
   });
 
-  // one location can have many clues
-  // location.hasMany(Clue);
-  // Clue.belongsTo(Location);
+  
 };

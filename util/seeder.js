@@ -30,7 +30,7 @@ module.exports = async (db) => {
       [
         {
           id: 1,
-          locationName: "NCSHP",
+          locationName: "Colden Pond",
         },
         {
           id: 2,
