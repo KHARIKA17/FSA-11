@@ -1,10 +1,11 @@
 import locationsArray from "./init-locations.js";
-import { isInsideQuad ,getLocationDirections} from "./location-quad.js";
-//import ppDist from "./point-polygon-distance.js";
+import { isInsideQuad, getLocationDirections } from "./location-quad.js";
 
 
 let colorElement1 = document.getElementById("status1");
 let colorElement2 = document.getElementById("status2");
+let resetButton = document.getElementById("reset-button");
+
 let device, location;
 
 function main() {
@@ -16,13 +17,25 @@ colorElement1.addEventListener("click", onClickSquareBox1);
 colorElement1.addEventListener("touch", onClickSquareBox1);
 colorElement2.addEventListener("click", onClickSquareBox2);
 colorElement2.addEventListener("touch", onClickSquareBox2);
+resetButton.addEventListener("click", resetScavenger);
 
 async function onClickSquareBox1() {
-  location = locationsArray[0];
-  let confirmation = "Your target location is " + location.name;
-  document.getElementById("status1").innerHTML = confirmation;
-  let utterance = new SpeechSynthesisUtterance(confirmation);
-  speechSynthesis.speak(utterance);
+  /* Ajax to get a random location from the database when the first box is clicked */
+  $.ajax({
+    type: "GET",
+    url: "/location/get-a-random-location",
+    success: function (coord) {
+      location = {
+        name: coord.locationName,
+        type: "quad",
+        coordinates: coord.coordinate,
+      };
+      let confirmation = "Your target location is " + location.name;
+      colorElement1.innerHTML = confirmation;
+      let utterance = new SpeechSynthesisUtterance(confirmation);
+      speechSynthesis.speak(utterance);
+    },
+  });
 }
 
 async function onClickSquareBox2() {
