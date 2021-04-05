@@ -35,6 +35,41 @@ export default [
       { latitude: 40.3558044547846, longitude: -94.88261506325078 },
     ],
   },
+  {
+    Name: "Foster Fitness Center",
+    type: "quad",
+    coordinates: [
+      {
+        latitude: 40.35068640403606, longitude: -94.88442627293685
+      },
+      { latitude: 40.35066826969888, longitude: -94.88405347917049 },
+      { latitude: 40.350251178598, longitude: -94.88393450243655 },
+      { latitude: 40.350245133780476, longitude: -94.8844580000659 },
+
+    ],
+  },
+
+  {
+    Name: "Admin block",
+    type: "quad",
+    coordinates: [
+      { latitude: 40.35326492425625, longitude: -94.88411981172477 },
+      { latitude: 40.353672456736, longitude: -94.88321883322703 },
+      { latitude: 40.35335020996101, longitude: -94.88295710723392 },
+      { latitude: 40.352921960581384, longitude: -94.88391697132933 },
+    ],
+  },
+  {
+    Name: "Village O Apartments",
+    type: "quad",
+    coordinates: [
+      {latitude:40.36132959481614,longitude: -94.88827429572812},
+      {latitude:40.36109633521448, longitude:-94.88777978731646},
+      {latitude: 40.36094281609458,longitude: -94.88790764725674},
+      {latitude:40.36116914039704, longitude:-94.88840180749345},
+     
+    ],
+  },
 
 
 ];
