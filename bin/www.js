@@ -107,7 +107,7 @@ const onListening = async () => {
 
 /* Workaround for increment indexes of postgre not updating after seeding by manually setting them */
 const updatePostgreSequences = async (db) => {
-  if (process.env.NODE_ENV !== "production") return;
+  if (process.env.NODE_ENV == "production") return;
   const extistingLocations = await db.models.location.count();
   const extistingCoordinates = await db.models.coordinate.count();
 
