@@ -17,7 +17,7 @@ colorElement1.addEventListener("click", onClickSquareBox1);
 colorElement1.addEventListener("touch", onClickSquareBox1);
 colorElement2.addEventListener("click", onClickSquareBox2);
 colorElement2.addEventListener("touch", onClickSquareBox2);
-resetButton.addEventListener("click", resetScavenger);
+// resetButton.addEventListener("click", resetScavenger);
 
 async function onClickSquareBox1() {
   /* Ajax to get a random location from the database when the first box is clicked */
