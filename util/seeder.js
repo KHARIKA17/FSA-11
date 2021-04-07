@@ -34,8 +34,9 @@ module.exports = async (db) => {
         },
         {
           id: 2,
-          locationName: "Villago",
+          locationName: "Village o apartments",
         },
+        
       ],
       { validate: true } // add options object to call new model validators
     );
@@ -98,7 +99,17 @@ module.exports = async (db) => {
           latitude: 40.36052111,
           longitude: -94.88821111,
         },
-      ],
+        
+        // id: 9,
+        //   locationId: 2,
+        //   latitude: 40.36052111,
+        //   longitude: -94.88821111,
+        // },
+        // {
+
+        // }
+        ],
+    
       { validate: true } // add options object to call new model validators
     );
 
