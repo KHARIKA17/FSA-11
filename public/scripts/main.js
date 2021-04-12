@@ -152,4 +152,9 @@ async function getLocation() {
     };	
   });	
 }	
-
+// Resets the scavenger game to it's inital state
+function resetScavenger() {
+  colorElement1.innerHTML = "";
+  colorElement2.innerHTML = "";
+  location = null;
+}
