@@ -71,6 +71,7 @@ async function onClickSquareBox2() {
   }
 
   device = await getLocation();
+  console.log(device);
   let isInside = isInsideQuad(device, location);
   let [status, speak] = ["", ""];	
   status = `Your location (lat,long): <br> (${device.coords.latitude.toFixed(	
