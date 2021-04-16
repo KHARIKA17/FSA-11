@@ -75,8 +75,8 @@ async function onClickSquareBox2() {
   let isInside = isInsideQuad(device, location);
   let [status, speak] = ["", ""];	
   status = `Your location (lat,long): <br> (${device.coords.latitude.toFixed(	
-    4	
-  )}, ${device.coords.longitude.toFixed(4)})`;	
+    6	
+  )}, ${device.coords.longitude.toFixed(6)})`;	
   if (isInside) {	
     /* Displays a popup indicating the player have discovered the quest	
        An option is also given to play again */	
